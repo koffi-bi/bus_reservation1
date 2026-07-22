@@ -8,6 +8,14 @@
         <version>4.1.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+         <profiles>
+    <profile>
+        <id>production</id>
+        <properties>
+            <spring.profiles.active>production</spring.profiles.active>
+        </properties>
+    </profile>
+</profiles>
     <groupId>com.yohbi</groupId>
     <artifactId>reservation_bus</artifactId>
     <version>0.0.1-SNAPSHOT</version>
