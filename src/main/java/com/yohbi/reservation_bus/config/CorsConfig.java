@@ -16,8 +16,11 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
 
-                registry.addMapping("/api/**")
-                        .allowedOrigins("https://venerable-crisp-a49c05.netlify.app")
+                registry.addMapping("/**")
+                        .allowedOrigins(
+                                "http://localhost:5173",
+                                "https://venerable-crisp-a49c05.netlify.app"
+                        )
                         .allowedMethods(
                                 "GET",
                                 "POST",
@@ -25,7 +28,8 @@ public class CorsConfig {
                                 "DELETE",
                                 "OPTIONS"
                         )
-                        .allowedHeaders("*");
+                        .allowedHeaders("*")
+                        .allowCredentials(true);
             }
         };
     }
